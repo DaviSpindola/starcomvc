@@ -16,7 +16,9 @@ const Hero = ({ classes, children, background }) => (
     <div className={classes.hero}>
       <div className={classes.main}>
         <div className={classes.container}>
-          <Typography>{children}</Typography>
+          <Typography variant="h4">
+            <span className={classes.headLine}>{children}</span>
+          </Typography>
         </div>
       </div>
     </div>
