@@ -26,7 +26,14 @@ const Detail = ({ classes, title, content, children }) => (
 
 Detail.propTypes = {
   title: PropTypes.string,
-  content: PropTypes.string
+  content: PropTypes.string,
+  children: PropTypes.node,
+  classes: PropTypes.object
+};
+
+Detail.defaultProps = {
+  title: "",
+  content: ""
 };
 
 export default withStyles(styles)(Detail);
