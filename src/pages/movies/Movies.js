@@ -1,18 +1,24 @@
 import React from "react";
 import Hero from "../../app/reusable/hero";
 import Loader from "../../app/reusable/Loader";
+import posterFinder from "../../api/posterFinder";
 
 const MoviesContainer = React.lazy(() =>
-  import("../../app/components/MovieList")
+  import("../../app/components/MovieDetailment/MovieList")
 );
 
 const Movies = () => (
   <div>
-    <Hero background="https://i.pinimg.com/originals/8c/b7/5a/8cb75ada8ce4a099aed61e7c387b6214.png">
-      MOVIES
-    </Hero>
+    <Hero background="https://i.imgur.com/9SQF5Wv.jpg">MOVIES</Hero>
     <main>
-      <section style={{ background: "white" }}>
+      <section
+        style={{
+          background: "white",
+          padding: "10px 0",
+          maxWidth: "80%",
+          margin: "0 auto"
+        }}
+      >
         <React.Suspense fallback={<Loader />}>
           <MoviesContainer />
         </React.Suspense>

@@ -3,6 +3,13 @@ import { Switch, Route } from "react-router-dom";
 
 import Movies from "./Movies";
 import * as routes from "../../constants/routes";
+import Loader from "../../app/reusable/Loader";
+import Hero from "../../app/reusable/hero";
+import posterFinder from "../../api/posterFinder";
+
+const MovieDetail = React.lazy(() =>
+  import("../../app/components/MovieDetailment/MovieDetail")
+);
 
 const MoviesPage = () => (
   <Switch>
@@ -12,7 +19,14 @@ const MoviesPage = () => (
       path={routes.MOVIE}
       render={props => (
         <div>
-          <h1>oi</h1>
+          <React.Suspense fallback={<Loader />}>
+            <MovieDetail
+              {...props}
+              content={({ episode_id }) => (
+                <Hero background={posterFinder(episode_id.toString())} />
+              )}
+            />
+          </React.Suspense>
         </div>
       )}
     />
