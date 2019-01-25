@@ -5,9 +5,7 @@ import Detail from "./Detail";
 
 describe("Detail test", () => {
   it("should render correctly", () => {
-    const component = shallow(
-      <Detail title="Hello world!" content="I came in peace!" />
-    );
+    const component = shallow(<Detail />);
 
     expect(component).toMatchSnapshot();
   });

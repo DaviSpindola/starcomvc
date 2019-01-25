@@ -4,6 +4,13 @@ import { Grid, Typography, withStyles } from "@material-ui/core";
 
 import styles from "./styles";
 
+/**
+ * Manage movie details with nested props
+ *
+ * @description Created the component
+ * @author davispindola
+ * @version 1.0
+ */
 const Detail = ({ classes, title, content, children }) => (
   <section>
     <Grid container>
@@ -12,10 +19,10 @@ const Detail = ({ classes, title, content, children }) => (
       </Grid>
       <Grid className={classes.item} item sm={8} xs={12} lg={6}>
         <div>
-          <Typography className={classes.uppercase} variant="h4" gutterBottom>
+          <Typography className={classes.uppercase} variant="h6" gutterBottom>
             {title}
           </Typography>
-          <div>
+          <div className={classes.detailFeatured}>
             <Typography variant="body1">{content}</Typography>
           </div>
         </div>

@@ -6,6 +6,11 @@ const styles = () => ({
   },
   uppercase: {
     textTransform: "uppercase"
+  },
+  detailFeatured: {
+    "& > p": {
+      color: "#00000098"
+    }
   }
 });
 
