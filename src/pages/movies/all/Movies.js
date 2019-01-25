@@ -1,15 +1,14 @@
 import React from "react";
-import Hero from "../../app/reusable/hero";
-import Loader from "../../app/reusable/Loader";
-import posterFinder from "../../api/posterFinder";
+import Hero from "../../../app/reusable/hero";
+import Loader from "../../../app/reusable/Loader";
 
 const MoviesContainer = React.lazy(() =>
-  import("../../app/components/MovieDetailment/MovieList")
+  import("../../../app/components/MovieDetailment/MovieList")
 );
 
 const Movies = () => (
   <div>
-    <Hero background="https://i.imgur.com/9SQF5Wv.jpg">MOVIES</Hero>
+    <Hero background="https://i.imgur.com/9SQF5Wv.jpg">movies</Hero>
     <main>
       <section
         style={{
