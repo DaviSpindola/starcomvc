@@ -31,4 +31,8 @@ Hero.propTypes = {
   background: PropTypes.string
 };
 
+Hero.defaultProps = {
+  background: ""
+};
+
 export default withStyles(styles)(Hero);
