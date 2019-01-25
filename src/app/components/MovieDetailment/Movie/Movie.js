@@ -7,6 +7,11 @@ import CardContent from "../../../reusable/card/content/CardContent";
 import posterFinder from "../../../../api/posterFinder";
 import CardBody from "../../../reusable/card/body/CardBody";
 
+/**
+ * @description Created the component
+ * @author davispindola
+ * @version 1.0
+ */
 const Movie = props => {
   const { title, release_date, episode_id, classes } = props;
 
@@ -27,9 +32,9 @@ Movie.propTypes = {
   opening_crawl: PropTypes.string,
   director: PropTypes.string,
   producer: PropTypes.string,
-  release_date: PropTypes.date,
-  created: PropTypes.date,
-  edited: PropTypes.date,
+  release_date: PropTypes.string,
+  created: PropTypes.string,
+  edited: PropTypes.string,
   classes: PropTypes.object
 };
 

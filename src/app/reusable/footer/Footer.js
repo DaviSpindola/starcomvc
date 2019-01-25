@@ -1,7 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { List, ListItem, withStyles, Typography } from "@material-ui/core";
 import styles from "./styles";
 
+/**
+ * Generic footer for all contexts in app
+ *
+ * @description Created the component
+ * @author davispindola
+ * @versio 1.0
+ */
 const Footer = ({ classes }) => (
   <footer className={classes.footer}>
     <footer className={classes.mainFooter}>
@@ -37,5 +45,9 @@ const Footer = ({ classes }) => (
     </footer>
   </footer>
 );
+
+Footer.propTypes = {
+  classes: PropTypes.object
+};
 
 export default withStyles(styles)(Footer);

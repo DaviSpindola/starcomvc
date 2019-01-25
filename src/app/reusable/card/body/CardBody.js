@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/core";
 import styles from "./styles";
 
 /**
+ * CardBody manage sections of content in card components or any another type of node
  *
  * @description Created the component
  * @author davispindola

@@ -1,14 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 
 import { receiveMovies } from "./actions";
-import Carousel from "../../../reusable/list";
 import MasterYoda from "../../../../api/MasterYoda";
 import { BASE_URL } from "../../../../api/endpoints";
-import Movie from "../Movie";
 
+/**
+ * @description Created the component
+ * @author davispindola
+ * @version 1.0
+ */
 class MovieListContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -22,22 +24,9 @@ class MovieListContainer extends React.Component {
   }
 
   render() {
-    const { movies } = this.props;
+    const { movies, render } = this.props;
 
-    return (
-      <div style={{ paddingBottom: 40 }}>
-        <Carousel>
-          {movies &&
-            movies.map((movie, index) => (
-              <div style={{ cursor: "pointer" }} key={index}>
-                <Link to={movie.url.split("api/")[1]}>
-                  <Movie {...movie} />
-                </Link>
-              </div>
-            ))}
-        </Carousel>
-      </div>
-    );
+    return <React.Fragment>{render(movies)}</React.Fragment>;
   }
 }
 

@@ -3,6 +3,13 @@ import PropTypes from "prop-types";
 import { Typography, withStyles } from "@material-ui/core";
 import styles from "./styles";
 
+/**
+ * Hero component used for create banner in any context
+ *
+ * @description Created the component
+ * @author davispindola
+ * @version 1.0
+ */
 const Hero = ({ classes, children, background }) => (
   <div className={classes.root}>
     <div className={classes.heroBackgroundWrapper}>

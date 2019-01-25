@@ -3,16 +3,19 @@ import PropTypes from "prop-types";
 
 import withContentManager from "../../../reusable/withContentManager";
 
+/**
+ * @description Created the component
+ * @author davispindola
+ * @version 1.0
+ */
 class MovieDetailContainer extends React.Component {
   render() {
-    const { currentContent, content } = this.props;
+    const { currentContent, render } = this.props;
 
     return (
-      <div>
-        <React.Fragment>
-          {currentContent !== null && content(currentContent)}
-        </React.Fragment>
-      </div>
+      <React.Fragment>
+        {currentContent && render(currentContent)}
+      </React.Fragment>
     );
   }
 }
@@ -20,7 +23,8 @@ class MovieDetailContainer extends React.Component {
 MovieDetailContainer.propTypes = {
   currentContent: PropTypes.object,
   isLoading: PropTypes.bool,
-  contentURL: PropTypes.string
+  contentURL: PropTypes.string,
+  render: PropTypes.func
 };
 
-export default React.memo(withContentManager(MovieDetailContainer));
+export default withContentManager(MovieDetailContainer);

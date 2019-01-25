@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import Slider from "react-slick";
 
 /**
+ * Generic carousel implementing with react-slick lib
+ *
  * @description Created the component
  * @author davispindola
  * @version 1.0
