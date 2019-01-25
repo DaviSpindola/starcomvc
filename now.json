@@ -39,8 +39,5 @@
       "src": "^/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "scripts": {
-    "now-build": "react-scripts build && mv build dist"
-  }
+  ]
 }
