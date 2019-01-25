@@ -1,6 +1,10 @@
 const styles = theme => ({
   navigationBar: {
-    backgroundColor: "#2a2a2ad4"
+    backgroundColor: "transparent",
+    boxShadow: "none"
+  },
+  homeButton: {
+    color: "white"
   }
 });
 
