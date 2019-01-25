@@ -1,5 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ed227b;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
