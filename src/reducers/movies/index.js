@@ -9,6 +9,14 @@ const INITIAL_STATE = {
   isLoading: false
 };
 
+/**
+ * @description Created the reducer
+ * @author davispindola
+ * @version 1.0
+ *
+ * @param {Object} state
+ * @param {Object} action
+ */
 const moviesReducer = (state = INITIAL_STATE, { type, payload }) => {
   switch (type) {
     case RECEIVE_TOTAL_MOVIES:
