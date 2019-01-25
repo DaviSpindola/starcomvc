@@ -3,12 +3,18 @@ import { Route } from "react-router-dom";
 
 import * as routes from "../../../constants/routes";
 import MoviesPage from "../../../pages/movies";
+import LandingPage from "../../../pages/landing";
 
 const pages = [
   {
     isExact: false,
-    path: routes.HOME,
+    path: routes.MOVIES,
     component: any => <MoviesPage {...any} />
+  },
+  {
+    isExact: true,
+    path: routes.HOME,
+    component: any => <LandingPage {...any} />
   }
 ];
 
